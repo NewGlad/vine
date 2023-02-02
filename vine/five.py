@@ -358,10 +358,10 @@ def python_2_non_unicode_str(cls):
 
 
 try:  # pragma: no cover
-    from inspect import formatargspec, getfullargspec
+    from inspect import getfullargspec
 except ImportError:  # Py2
     from collections import namedtuple
-    from inspect import formatargspec, getargspec as _getargspec  # noqa
+    from inspect import getargspec as _getargspec  # noqa
 
     FullArgSpec = namedtuple('FullArgSpec', (
         'args', 'varargs', 'varkw', 'defaults',
